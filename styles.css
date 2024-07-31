@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 5rem;
+    color: white;
+    position: relative;
+    letter-spacing: 0.1em;
+    animation: color-change 5s infinite, glow 1.5s infinite alternate;
+}
+
+.title span {
+    display: inline-block;
+    position: relative;
+    animation: float 2s ease-in-out infinite, rotate 4s linear infinite;
+}
+
+@keyframes color-change {
+    0% { color: #ff0040; }
+    25% { color: #ff9500; }
+    50% { color: #ffe600; }
+    75% { color: #3cff00; }
+    100% { color: #ff0040; }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff0040, 0 0 20px #ff0040, 0 0 25px #ff0040, 0 0 30px #ff0040, 0 0 35px #ff0040;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff9500, 0 0 40px #ff9500, 0 0 50px #ff9500, 0 0 60px #ff9500, 0 0 70px #ff9500;
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
